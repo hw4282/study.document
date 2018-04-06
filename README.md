@@ -1,4 +1,1 @@
 study.document
-
-
-abc
