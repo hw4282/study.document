@@ -1,17 +1,12 @@
 def alpha_string46(s):
-        if len(s) == 4 or len(s) == 6:
-                result =0
-                width = len(s)
-                for i in range(0,width):
-                        a = s[i]
-                        if ord(a) >= 48 and ord(a) <= 57:
-                                result += 1
+        try:
+                a = int(s)
+                if len(s) == 4 or len(s) == 6:
+                        return True
 
-        if result == width:
-                return True
-        else:
+        except ValueError:
                 return False
-
+                
 #테스트 코드
 print(alpha_string46("a234"))
 print(alpha_string46("1234"))
