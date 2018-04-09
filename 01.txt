@@ -11,3 +11,5 @@ def alpha_string46(s):
 print(alpha_string46("a234"))
 print(alpha_string46("1234"))
 print(alpha_string46("123456"))
+
+##https://programmers.co.kr/learn/challenge_codes/99
