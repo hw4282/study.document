@@ -1,10 +1,8 @@
 def sumMatrix(a, b):
     buf_answer = []
     answer = []
-    length = len(a)
-    length1 = len(a[0])
-    for i in range(length):
-        for j in range(length1):
+    for i in range(len(a)):
+        for j in range(len(a[0])):
             buf_answer.append(a[i][j] + b[i][j])
         answer.append(buf_answer)
         buf_answer = []
