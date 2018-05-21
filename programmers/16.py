@@ -1,19 +1,13 @@
 def caesar(s, n):
-    buf = list(s)
-    result = ""
+    s = list(s)
+    for i in range(len(s)):
+        if s[i].isupper():
+            s[i] = chr((ord(s[i]) - ord('A') + n) % 26 + ord('A'))
+        elif s[i].islower():
+            s[i] = chr((ord(s[i]) - ord('a') + n) % 26 + ord('a'))
+    return "".join(s)
 
-    for i in range(0, len(buf)):
-        if ord(buf[i]) == 32:
-            result = result + str(buf[i])
-            continue
-        buf2 = ord(buf[i]) + n
+print('s는 "a B z", n은 4인 경우: ' + caesar("a B z", 4))
 
-        # if n > 27; i use while
-        while (ord(buf[i]) < 91 and buf2 >= 91) or buf2 >= 123:
-            buf2 -= 26
-
-        buf[i] = chr(buf2)
-        result = result + str(buf[i])
-
-    return result
-    #https://programmers.co.kr/learn/challenge_codes/23
+return result
+#https://programmers.co.kr/learn/challenge_codes/23
