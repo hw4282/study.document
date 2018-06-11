@@ -51,3 +51,4 @@ def solution2(n, s, h):
                 return former_v_list
 
 print(solution(4,15))
+#https://programmers.co.kr/learn/courses/30/lessons/12938?language=python3
